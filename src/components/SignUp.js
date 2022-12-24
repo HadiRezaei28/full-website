@@ -8,6 +8,7 @@ import PasswordStrengthMeter from './PasswordStrengthMeter';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { notify } from './toast';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
 
@@ -154,7 +155,7 @@ const SignUp = () => {
                     {errors.isAccepted && touched.isAccepted && <span className={styles.error}>{errors.isAccepted}</span>}
                 </div>
                 <div className={styles.formButtons}>
-                    <a href='#'>Login</a>
+                    <Link to='/login'>Login</Link>
                     <button type="submit">Sign Up</button>
                 </div>
             </form>

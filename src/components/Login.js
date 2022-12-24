@@ -4,10 +4,10 @@ import { validate } from './validate';
 import { Icon } from 'react-icons-kit'
 import { eye } from 'react-icons-kit/fa/eye';
 import { eyeSlash } from 'react-icons-kit/fa/eyeSlash'
-import PasswordStrengthMeter from './PasswordStrengthMeter';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { notify } from './toast';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -99,7 +99,7 @@ const Login = () => {
                     {touched.password && errors.password && <span className={styles.error}>{errors.password}</span>}
                 </div>
                 <div className={styles.formButtons}>
-                    <a href='#'>Sign Up</a>
+                    <Link to='/signup'>Sign Up</Link>
                     <button type="submit">Login</button>
                 </div>
             </form>
