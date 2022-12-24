@@ -5,6 +5,9 @@ import { Icon } from 'react-icons-kit'
 import { eye } from 'react-icons-kit/fa/eye';
 import { eyeSlash } from 'react-icons-kit/fa/eyeSlash'
 import PasswordStrengthMeter from './PasswordStrengthMeter';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { notify } from './toast';
 
 const SignUp = () => {
 
@@ -55,9 +58,26 @@ const SignUp = () => {
         }
     }
 
+    const submitHandler = (e) => {
+        e.preventDefault();
+        if (!Object.keys(errors).length) {
+            notify("You signed in successfully", "success")
+        } else {
+            notify("Invalid data!", "error")
+            setTouched({
+                name: true,
+                email: true,
+                password: true,
+                confirmpassword: true,
+                isAccepted: true
+            })
+        }
+    }
+
+
     return (
         <div className={styles.container}>
-            <form className={styles.formContainer}>
+            <form className={styles.formContainer} onSubmit={submitHandler}>
                 <h1 className={styles.header}>SignUp</h1>
                 <div className={styles.formField}>
                     <label>Name</label>
@@ -138,6 +158,7 @@ const SignUp = () => {
                     <button type="submit">Sign Up</button>
                 </div>
             </form>
+            <ToastContainer />
         </div>
     );
 };
