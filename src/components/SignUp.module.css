@@ -176,6 +176,10 @@
         width: 90%;
     }
 
+    .uncompleted {
+        width: 90%;
+    }
+
     .formField:nth-child(6) label {
         font-size: 9px;
     }

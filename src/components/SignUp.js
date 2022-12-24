@@ -4,6 +4,7 @@ import { validate } from './validate';
 import { Icon } from 'react-icons-kit'
 import { eye } from 'react-icons-kit/fa/eye';
 import { eyeSlash } from 'react-icons-kit/fa/eyeSlash'
+import PasswordStrengthMeter from './PasswordStrengthMeter';
 
 const SignUp = () => {
 
@@ -97,7 +98,9 @@ const SignUp = () => {
                             {show.password === "password" ? <Icon icon={eye} /> : <Icon icon={eyeSlash} />}
                         </span>
                     </div>
-                    {errors.password && touched.password && <span className={styles.error}>{errors.password}</span>}
+                    {touched.password &&
+                        <PasswordStrengthMeter password={data.password} />
+                    }
                 </div>
                 <div className={styles.formField}>
                     <label>Confirm Password</label>
