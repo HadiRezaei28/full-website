@@ -38,7 +38,7 @@
     font-size: 0.9rem;
 }
 
-.formField span {
+.formField .error {
     height: 10px;
     text-align: left;
     margin-top: 5px;
@@ -60,7 +60,17 @@
     transition: all 0.2s ease-in;
 }
 
-.formInput:focus {
+.uncompleted {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    border: 1px solid red;
+    transition: all 0.2s ease-in;
+}
+
+.formInput:focus,
+.uncompleted:focus {
     outline: none;
     line-height: 30px;
     height: 30px;
@@ -69,6 +79,25 @@
 
 .formField:nth-child(6) label {
     color: #1a73e8;
+}
+
+.inputcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.inputcontainer span {
+    width: fit-content;
+    height: 100%;
+    position: absolute;
+    top: 1px;
+    right: 10px;
+}
+
+.inputcontainer span svg {
+    cursor: pointer;
 }
 
 .checkBoxContainer {
