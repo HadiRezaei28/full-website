@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../../../components/Navbar';
 import { fetchProducts } from './productsSlice';
+import SingleProduct from './SingleProduct';
 
 const Products = () => {
 
@@ -9,21 +10,25 @@ const Products = () => {
     const products = useSelector(state => state.products);
 
     useEffect(() => {
-        dispatch(fetchProducts())
+        if (!products.data.length) {
+            dispatch(fetchProducts())
+        }
     }, [])
 
     return (
         <>
-        <Navbar />
-        <div>
-            {
-                products.loading ? <h2>Loading...</h2>:
-                products.error ? <h2>{products.error}</h2> :
-                products.data.map(product => {
-                    return <p key={product.id}>{product.id}</p>
-                })
-            }
-        </div>
+            <Navbar />
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
+                {
+                    products.loading ? <h2>Loading...</h2> :
+                        products.error ? <h2>{products.error}</h2> :
+                            products.data.map(product => {
+                                return <SingleProduct key={product.id} product={product} />
+
+
+                            })
+                }
+            </div>
         </>
     );
 };
