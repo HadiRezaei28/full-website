@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../../../components/Navbar';
+import NavbarCart from '../cart/NavbarCart';
 import { fetchProducts } from './productsSlice';
 import SingleProduct from './SingleProduct';
 
@@ -18,6 +19,7 @@ const Products = () => {
     return (
         <>
             <Navbar />
+            <NavbarCart />
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
                 {
                     products.loading ? <h2>Loading...</h2> :

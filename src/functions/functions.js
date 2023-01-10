@@ -17,3 +17,4 @@ export const quantityCount = (state, id) => {
         return state.selectedItems[index].quantity
     }
 }
+
