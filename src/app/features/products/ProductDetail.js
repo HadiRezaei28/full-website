@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import Navbar from '../../../components/Navbar';
+import Navbar from '../../../components/Navbar/Navbar';
 import styles from "./ProductDetail.module.css"
 
 const ProductDetail = () => {

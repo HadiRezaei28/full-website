@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Navbar from '../../../components/Navbar';
+import Navbar from '../../../components/Navbar/Navbar';
 import { fetchProducts } from './productsSlice';
 import SingleProduct from './SingleProduct';
 import styles from "./Products.module.css"

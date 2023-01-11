@@ -1,0 +1,221 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.container .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+}
+
+.left img {
+    width: 90%;
+}
+
+.container .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.right h1, h2, h3 {
+    color: #333;
+    margin: 0;
+    padding: 5px;
+    padding-left: 0;
+}
+
+.right h1 {
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.right h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.right h3 {
+    font-size: 34px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    border-bottom: solid 1px silver;
+}
+
+.right p {
+    font-size: 14px;
+}
+
+.btncontainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.start {
+    text-decoration: none;
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 50px;
+}
+
+.signup {
+    text-decoration: none;
+    background-color:rgb(64, 64, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width:1200px) {
+    .container {
+        padding: 90px;
+    }
+
+    .right h1 {
+        font-size: 42px;
+    }
+    
+    .right h2 {
+        font-size: 36px;
+    }
+    
+    .right h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:1000px) {
+    .container {
+        padding: 80px;
+        flex-direction:column-reverse;
+        
+    }
+
+    .right h1 {
+        font-size: 42px;
+    }
+    
+    .right h2 {
+        font-size: 36px;
+    }
+    
+    .right h3 {
+        font-size: 30px;
+    }
+
+    .container .left {
+        width: 90%;
+    }
+}
+
+@media (max-width:800px) {
+    .container {
+        padding: 70px;
+        flex-direction:column-reverse;
+        
+    }
+
+    .right h1 {
+        font-size: 38px;
+    }
+    
+    .right h2 {
+        font-size: 32px;
+    }
+    
+    .right h3 {
+        font-size: 26px;
+    }
+
+    .container .left {
+        width: 90%;
+    }
+}
+
+@media (max-width:600px) {
+    .container {
+        padding: 60px;
+        flex-direction:column-reverse;
+        
+    }
+
+    .right h1 {
+        font-size: 34px;
+    }
+    
+    .right h2 {
+        font-size: 28px;
+    }
+    
+    .right h3 {
+        font-size: 22px;
+    }
+
+    .container .left {
+        width: 90%;
+    }
+}
+
+@media (max-width:400px) {
+    .container {
+        padding: 50px;
+        flex-direction:column-reverse;
+        
+    }
+
+    .right h1 {
+        font-size: 28px;
+    }
+    
+    .right h2 {
+        font-size: 22px;
+    }
+    
+    .right h3 {
+        font-size: 16px;
+    }
+
+    .container .left {
+        width: 90%;
+    }
+
+    .btncontainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .start {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .signup {
+        font-size: 14px;
+    }
+}
+
+

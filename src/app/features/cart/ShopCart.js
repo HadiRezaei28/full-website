@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Navbar from '../../../components/Navbar';
+import Navbar from '../../../components/Navbar/Navbar';
 import Cart from './Cart';
 import { Checkout, Clear } from './cartSlice';
 import styles from "./ShopCart.module.css";
@@ -23,7 +23,7 @@ const ShopCart = () => {
                         <p><span>Totol Items:</span> {state.itemsCounter}</p>
                         <p><span>Totol Payments:</span> {state.total} $</p>
                         <div className={styles.buttonContainer}>
-                            <button className={styles.checkout}  onClick={() => dispatch(Checkout())} >Ckeck Out</button>
+                            <button className={styles.checkout} onClick={() => dispatch(Checkout())} >Ckeck Out</button>
                             <button className={styles.clear} onClick={() => dispatch(Clear())} >Clear</button>
                         </div>
                     </div>
