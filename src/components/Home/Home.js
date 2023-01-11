@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
+import Feature from './Feature/Feature';
 import Header from './Header/Header';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Navbar />
             <Header />
+            <Feature />
         </div>
     );
 };

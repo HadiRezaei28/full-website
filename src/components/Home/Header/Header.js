@@ -15,8 +15,8 @@ const Header = () => {
                 <h3>Affordable prices</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 <div className={styles.btncontainer}>
-                    <Link className={styles.start} to="./products">Start Shopping</Link>
-                    <Link className={styles.signup} to="./signup">Sign Up</Link>
+                    <Link className={styles.start} to="/products">Start Shopping</Link>
+                    <Link className={styles.signup} to="/signup">Sign Up</Link>
                 </div>
             </div>
         </div>

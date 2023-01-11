@@ -12,7 +12,7 @@
     width: 900px;
 }
 
-.left img {
+.container .left img {
     width: 90%;
 }
 
@@ -91,6 +91,10 @@
         padding: 90px;
     }
 
+    .container .left img{
+        width: 80%;
+    }
+
     .right h1 {
         font-size: 42px;
     }
@@ -108,7 +112,20 @@
     .container {
         padding: 80px;
         flex-direction:column-reverse;
-        
+    }
+
+    .container .left img{
+        width: 80%;
+    }
+
+    .container .right {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btncontainer{
+        align-items: center;
+        justify-content: center;
     }
 
     .right h1 {
@@ -125,6 +142,10 @@
 
     .container .left {
         width: 90%;
+    }
+
+    .left {
+        margin-top: 30px;
     }
 }
 
