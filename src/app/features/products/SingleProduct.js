@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { shorten, isInCart, quantityCount } from '../../../functions/functions';
 import { AddItem, RemoveItem, Increase, Decrease } from '../cart/cartSlice';
 import { FaTrashAlt } from "react-icons/fa";
+import styles from "./SingleProduct.module.css"
 
 
 const SingleProduct = ({ product }) => {
@@ -12,19 +13,19 @@ const SingleProduct = ({ product }) => {
     const state = useSelector(state => state.cart);
 
     return (
-        <div>
-            <img src={product.image} alt='product' style={{ width: "200px" }} />
+        <div className={styles.container}>
+            <img src={product.image} alt='product' className={styles.image} />
             <h3>{shorten(product.title)}</h3>
             <p>{product.price} $</p>
-            <div>
+            <div className={styles.link}>
                 <Link to={`/products/${product.id}`}>Detail</Link>
-                <div>
-                    {quantityCount(state, product.id) === 1 && <button onClick={() => dispatch(RemoveItem(product))}><FaTrashAlt /></button>}
-                    {quantityCount(state, product.id) > 1 && <button onClick={() => dispatch(Decrease(product))}>-</button>}
-                    {quantityCount(state, product.id) > 0 && quantityCount(state, product.id)}
+                <div className={styles.btnContainer}>
+                    {quantityCount(state, product.id) === 1 && <button className={styles.smallbtn} onClick={() => dispatch(RemoveItem(product))}><FaTrashAlt /></button>}
+                    {quantityCount(state, product.id) > 1 && <button className={styles.smallbtn} onClick={() => dispatch(Decrease(product))}>-</button>}
+                    {quantityCount(state, product.id) > 0 && <span className={styles.count}>{quantityCount(state, product.id)}</span> }
                     {
                         isInCart(state, product.id) ?
-                            <button onClick={() => dispatch(Increase(product))}>+</button> :
+                            <button className={styles.smallbtn} onClick={() => dispatch(Increase(product))}>+</button> :
                             <button onClick={() => dispatch(AddItem(product))}>Add to Cart</button>
                     }
 

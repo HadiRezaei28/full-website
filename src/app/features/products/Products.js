@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../../../components/Navbar';
-import NavbarCart from '../cart/NavbarCart';
 import { fetchProducts } from './productsSlice';
 import SingleProduct from './SingleProduct';
+import styles from "./Products.module.css"
 
 const Products = () => {
 
@@ -19,8 +19,7 @@ const Products = () => {
     return (
         <>
             <Navbar />
-            <NavbarCart />
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
+            <div className={styles.container}>
                 {
                     products.loading ? <h2>Loading...</h2> :
                         products.error ? <h2>{products.error}</h2> :

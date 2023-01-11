@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { shorten } from '../../../functions/functions';
 import { FaTrashAlt } from "react-icons/fa";
 import { Decrease, Increase, RemoveItem } from './cartSlice';
+import styles from "./Cart.module.css"
 
 const Cart = ({ data }) => {
 
@@ -10,16 +11,16 @@ const Cart = ({ data }) => {
     const dispatch = useDispatch();
 
     return (
-        <div>
-            <img src={image} alt="product" />
-            <div>
+        <div className={styles.container}>
+            <img className={styles.productImage} src={image} alt="product" />
+            <div className={styles.data}>
                 <h3>{shorten(title)}</h3>
                 <p>{price} $</p>
             </div>
             <div>
-                <span>{quantity}</span>
+                <span className={styles.quantity}>{quantity}</span>
             </div>
-            <div>
+            <div className={styles.buttonContainer}>
                 {quantity > 1 ? <button onClick={() => dispatch(Decrease(data))}>-</button> : 
                 <button onClick={() => dispatch(RemoveItem(data))}><FaTrashAlt /></button>}
                 {<button onClick={() => dispatch(Increase(data))}>+</button>}

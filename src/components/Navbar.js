@@ -5,17 +5,26 @@ import { Link } from 'react-router-dom';
 import { bars } from 'react-icons-kit/fa/bars';
 import { Icon } from 'react-icons-kit';
 import { close } from 'react-icons-kit/fa/close';
+import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from 'react-redux';
 
 // `${toggle ? styles.listshow & styles.list : styles.list}`
 
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
+    const itemsCounter = useSelector(state => state.cart.itemsCounter)
 
     return (
         <div className={styles.navbar}>
             <div className={styles.logo}>
                 <Link to="/"><img src={logo} alt="logo" /></Link>
+                <div className={styles.cart}>
+                    <Link to="/cart">
+                        <FaShoppingCart />
+                    </Link>
+                    <span>{itemsCounter}</span>
+                </div>
             </div>
             <div className={`${toggle ? `${styles.active} ${styles.list}` : styles.list}`} >
                 <ul>
