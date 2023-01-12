@@ -1,0 +1,177 @@
+.container {
+    background: url(../../../images/04.jpg);
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 200px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container h1 {
+    margin-bottom: 30px;
+    font-size: 44px;
+}
+
+.btncontainer {
+    width: 450px;
+    height: 50px;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btncontainer input {
+    height: 30px;
+    width: 80%;
+    background: transparent;
+    border: solid 1px #777;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 16px;
+    color: #777;
+}
+
+.btncontainer button {
+    background: #2da5ff;
+    height: 42px;
+    width: 20%;
+    padding: 5px 10px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.social {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social .icon {
+    border: solid 1px #777;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 180px;
+    }
+
+    .container h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 160px;
+    }
+
+    .container h1 {
+        font-size: 40px;
+    }
+
+    .social .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        padding: 140px;
+    }
+
+    .container h1 {
+        font-size: 38px;
+    }
+
+    .social .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 80px;
+    }
+
+    .container h1 {
+        font-size: 22px;
+    }
+
+    .social .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .btncontainer {
+        width: 300px;
+    }
+
+    .btncontainer input {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .btncontainer button {
+        width: 30%;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 40px;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .social {
+        width: 200px;
+    }
+
+    .social .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .btncontainer {
+        width: 250px;
+    }
+
+    .btncontainer input {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .btncontainer button {
+        width: 30%;
+    }
+}
