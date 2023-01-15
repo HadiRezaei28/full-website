@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from "./Feature.module.css";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { FeaturesList } from './data';
 import { BsHexagon } from "react-icons/bs";
 import picture02 from "../../../images/02.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Feature = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000
+        });
+    }, [])
+
     return (
         <div className={styles.container}>
-            <div className={styles.top}>
+            <div className={styles.top} data-aos="fade-up">
                 <div><BsFillBookmarkStarFill /></div>
                 <h2>Main features</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </div>
             <div className={styles.bottom}>
-                <div className={styles.text}>
+                <div className={styles.text} data-aos="fade-left">
                     {
                         FeaturesList.map(item => {
                             return (
@@ -35,7 +44,7 @@ const Feature = () => {
                         })
                     }
                 </div>
-                <div className={styles.image}>
+                <div className={styles.image} data-aos="fade-right">
                     <img src={picture02} alt="picture02" />
                 </div>
             </div>
