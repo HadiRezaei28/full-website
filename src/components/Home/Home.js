@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import Download from './Download/Download';
 import Faq from './Faq/Faq';
 import Feature from './Feature/Feature';
+import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import Subscribe from './Subscribe/Subscribe';
 
@@ -15,6 +16,7 @@ const Home = () => {
             <Download />
             <Subscribe />
             <Faq />
+            <Footer />
         </div>
     );
 };
